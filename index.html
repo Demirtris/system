@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Mobilya Aksesuarları - Sosyal Medya Hesaplarımız</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #E26E2D 0%, #351909 50%, #000000 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-container {
+            width: 110px;
+            height: 110px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 25px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-logo {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .square {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #C35626;
+            transform: rotate(45deg);
+        }
+
+        .sq-center {
+            top: 22px;
+            left: 22px;
+        }
+        .sq-top {
+            top: 2px;
+            left: 22px;
+        }
+        .sq-bottom {
+            top: 42px;
+            left: 22px;
+        }
+        .sq-left {
+            top: 22px;
+            left: 2px;
+        }
+        .sq-right {
+            top: 22px;
+            left: 42px;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            margin-bottom: 200px;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            opacity: 0.95;
+        }
+
+        .link-btn i {
+            font-size: 20px;
+            width: 30px;
+            text-align: left;
+        }
+
+        .link-btn span {
+            flex-grow: 1;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .btn-website {
+            background-color: #4F7EA8;
+        }
+
+        .btn-instagram {
+            background-color: #D63E5E;
+        }
+
+        .btn-youtube {
+            background-color: #C61A23;
+        }
+		
+		@media (max-width: 768px) {
+			p {
+				margin-bottom: 100px;
+			}
+		}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <div class="custom-logo">
+                <div class="square sq-center"></div>
+                <div class="square sq-top"></div>
+                <div class="square sq-bottom"></div>
+                <div class="square sq-left"></div>
+                <div class="square sq-right"></div>
+            </div>
+        </div>
+
+        <h1>System Mobilya Aksesuarları</h1>
+        <p>sosyal medya hesaplarımız</p>
+
+        <div class="links-wrapper">
+            <a href="http://www.systemhandle.com" target="_blank" class="link-btn btn-website">
+                <i class="fa-solid fa-link"></i>
+                <span>sayfamız</span>
+            </a>
+
+            <a href="https://www.instagram.com/systemhandles/" target="_blank" class="link-btn btn-instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.youtube.com/@systemhandle." target="_blank" class="link-btn btn-youtube">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Youtube</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
