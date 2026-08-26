@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System Mobilya Aksesuarları - Sosyal Medya Hesaplarımız</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         * {
             margin: 0;
@@ -16,14 +16,16 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* 1. DEĞİŞİKLİK: body yüksekliği dinamik yapıldı ve taşmaya izin verildi */
         body {
             background: linear-gradient(180deg, #E26E2D 0%, #351909 50%, #000000 100%);
-            min-height: 100vh;
+            min-height: 100dvh; 
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Sayfa rahat kaysın diye üstten başlattık */
             color: #ffffff;
-            padding: 20px;
+            padding: 40px 20px;
+            overflow-y: auto; /* Kaydırma çubuğunun aktif kalmasını sağlar */
         }
 
         .container {
@@ -59,26 +61,11 @@
             transform: rotate(45deg);
         }
 
-        .sq-center {
-            top: 22px;
-            left: 22px;
-        }
-        .sq-top {
-            top: 2px;
-            left: 22px;
-        }
-        .sq-bottom {
-            top: 42px;
-            left: 22px;
-        }
-        .sq-left {
-            top: 22px;
-            left: 2px;
-        }
-        .sq-right {
-            top: 22px;
-            left: 42px;
-        }
+        .sq-center { top: 22px; left: 22px; }
+        .sq-top { top: 2px; left: 22px; }
+        .sq-bottom { top: 42px; left: 22px; }
+        .sq-left { top: 22px; left: 2px; }
+        .sq-right { top: 22px; left: 42px; }
 
         h1 {
             font-size: 18px;
@@ -88,11 +75,12 @@
             text-transform: uppercase;
         }
 
+        /* 2. DEĞİŞİKLİK: Aşırı büyük 200px boşluk daraltıldı, butonlar yukarı geldi */
         p {
             font-size: 14px;
             color: rgba(255, 255, 255, 0.6);
             font-weight: 300;
-            margin-bottom: 200px;
+            margin-bottom: 40px; 
         }
 
         .links-wrapper {
@@ -132,26 +120,17 @@
             margin-left: 10px;
         }
 
-        .btn-website {
-            background-color: #4F7EA8;
-        }
-
-        .btn-instagram {
-            background-color: #D63E5E;
-        }
-
-        .btn-youtube {
-            background-color: #C61A23;
-        }
+        .btn-website { background-color: #4F7EA8; }
+        .btn-instagram { background-color: #D63E5E; }
+        .btn-youtube { background-color: #C61A23; }
 		
 		@media (max-width: 768px) {
-			p {
-				margin-bottom: 100px;
-			}
+			p { margin-bottom: 30px; }
 		}
 
-        .kaydirma-boslugu {
-            height: 60px;
+        /* 3. DEĞİŞİKLİK: Tarayıcıyı tetikleyecek akıllı alt boşluk */
+        .alt-esneklik-alani {
+            height: 120px; 
             width: 100%;
         }
     </style>
@@ -172,31 +151,24 @@
         <p>sosyal medya hesaplarımız</p>
 
         <div class="links-wrapper">
-            <a href="http://www.systemhandle.com" target="_blank" class="link-btn btn-website">
+            <a href="http://systemhandle.com" target="_blank" class="link-btn btn-website">
                 <i class="fa-solid fa-link"></i>
                 <span>sayfamız</span>
             </a>
 
-            <a href="https://www.instagram.com/systemhandles/" target="_blank" class="link-btn btn-instagram">
+            <a href="https://instagram.com" target="_blank" class="link-btn btn-instagram">
                 <i class="fa-brands fa-instagram"></i>
                 <span>Instagram</span>
             </a>
 
-            <a href="https://www.youtube.com/@systemhandle." target="_blank" class="link-btn btn-youtube">
+            <a href="https://youtube.com." target="_blank" class="link-btn btn-youtube">
                 <i class="fa-brands fa-youtube"></i>
                 <span>Youtube</span>
             </a>
         </div>
 
-        <div class="kaydirma-boslugu"></div>
+        <!-- Tetikleyici alan container içine eklendi -->
+        <div class="alt-esneklik-alani"></div>
     </div>
-
-    <script>
-        window.addEventListener("load", function() {
-            setTimeout(function() {
-                window.scrollTo(0, 1);
-            }, 300);
-        });
-    </script>
 </body>
 </html>
