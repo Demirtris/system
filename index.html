@@ -16,24 +16,21 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Bulduğunuz Yöntem: Tarayıcıyı kaydırmaya zorlamak için devasa yükseklik verildi */
         body {
             background: linear-gradient(180deg, #E26E2D 0%, #351909 50%, #000000 100%);
-            height: 5000px;
+            height: 4000px; 
             color: #ffffff;
-            padding: 20px;
+            padding-top: 260px; 
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
         }
 
-        /* Düzenleme: Butonlar ve logonun kaydırınca yukarı kaçmaması için ana alan ekrana sabitlendi */
         .container {
             width: 100%;
             max-width: 400px;
             text-align: center;
-            padding: 20px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            padding: 0 20px;
+            margin: 0 auto;
         }
 
         .logo-container {
@@ -159,12 +156,11 @@
         </div>
     </div>
 
-    <!-- Bulduğunuz Yöntem: Sayfa açılır açılmaz otomatik aşağı kaydırma tetiklenir -->
     <script>
         window.addEventListener("load", function() {
             setTimeout(function() {
-                window.scrollTo(0, 500);
-            }, 200);
+                window.scrollTo(0, 200);
+            }, 250);
         });
     </script>
 
