@@ -16,21 +16,24 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Bulduğunuz Yöntem: Tarayıcıyı kaydırmaya zorlamak için devasa yükseklik verildi */
         body {
             background: linear-gradient(180deg, #E26E2D 0%, #351909 50%, #000000 100%);
-            min-height: 100vh;
+            height: 5000px;
             color: #ffffff;
-            padding: 50px 20px 0 20px; /* Alttaki padding'i sıfırladık */
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
+            padding: 20px;
         }
 
+        /* Düzenleme: Butonlar ve logonun kaydırınca yukarı kaçmaması için ana alan ekrana sabitlendi */
         .container {
             width: 100%;
             max-width: 400px;
             text-align: center;
-            padding: 20px 20px 0 20px;
-            margin: 0 auto; 
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .logo-container {
@@ -77,7 +80,7 @@
             font-size: 14px;
             color: rgba(255, 255, 255, 0.6);
             font-weight: 300;
-            margin-bottom: 40px; 
+            margin-bottom: 35px;
         }
 
         .links-wrapper {
@@ -120,19 +123,10 @@
         .btn-website { background-color: #4F7EA8; }
         .btn-instagram { background-color: #D63E5E; }
         .btn-youtube { background-color: #C61A23; }
-		
-		@media (max-width: 768px) {
-			p { margin-bottom: 30px; }
-		}
-
-        /* KESİN ÇÖZÜM: Boşluk yüksekliği tam bir ekran boyu (100vh) yapıldı */
-        .alt-esneklik-alani {
-            height: 100vh; 
-            width: 100%;
-        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <div class="logo-container">
             <div class="custom-logo">
@@ -163,8 +157,16 @@
                 <span>Youtube</span>
             </a>
         </div>
-
-        <div class="alt-esneklik-alani"></div>
     </div>
+
+    <!-- Bulduğunuz Yöntem: Sayfa açılır açılmaz otomatik aşağı kaydırma tetiklenir -->
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                window.scrollTo(0, 500);
+            }, 200);
+        });
+    </script>
+
 </body>
 </html>
